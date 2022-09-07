@@ -1,1 +1,1 @@
-# postcss-drupal-breakpoints-css
+# drupal-breakpoints-css
