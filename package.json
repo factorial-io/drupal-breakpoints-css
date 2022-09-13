@@ -1,6 +1,6 @@
 {
   "name": "@factorial/drupal-breakpoints-css",
-  "description": "@factorial/stack out of the box config for eleventy",
+  "description": "Drupal breakpoints to css customProperties",
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
@@ -14,17 +14,14 @@
   "repository": "git@github.com:factorial-io/drupal-breakpoints-css.git",
   "author": "Dennis Jauernig <dennis@factorial.io>",
   "keywords": [
-    "Factorial Stack",
     "@factorial",
-    "fstack",
-    "eleventy",
-    "11ty",
-    "eleventy-plugin"
+    "drupal",
+    "css"
   ],
   "bugs": {
-    "url": "https://github.com/factorial-io/eleventy-plugin-fstack/issues"
+    "url": "https://github.com/factorial-io/drupal-breakpoints-css/issues"
   },
-  "homepage": "https://github.com/factorial-io/eleventy-plugin-fstack#readme",
+  "homepage": "https://github.com/factorial-io/drupal-breakpoints-css#readme",
   "devDependencies": {
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -33,5 +30,15 @@
     "eslint-plugin-jsdoc": "^39.2.9",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.6.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "scripts": {
+    "lint": "eslint *.js",
+    "start": "node ."
+  },
+  "bin": {
+    "drupal-breakpoints-css": "./bin/index.js"
   }
 }

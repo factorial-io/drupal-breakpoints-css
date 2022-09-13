@@ -8,11 +8,20 @@ module.exports = {
   ],
   plugins: ["prettier", "jsdoc"],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 13,
   },
   rules: {
     "prettier/prettier": "error",
     "no-use-before-define": ["error", { functions: false }],
+    "no-console": ["error", { allow: ["warn", "error"] }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: true,
+        optionalDependencies: true,
+        peerDependencies: true,
+      },
+    ],
     "jsdoc/require-jsdoc": [
       "warn",
       {
