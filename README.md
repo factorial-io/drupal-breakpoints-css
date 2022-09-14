@@ -90,9 +90,9 @@ html {
 ```js
 // Generated js file
 const BREAKPOINTS = {
-  "ThemeName-small-query": "only screen and (max-width: 35.5625rem)",
+  "ThemeName-small-query": "only screen and (max-width: 47.9375rem)",
   "ThemeName-small-resolution": "2x",
-  "ThemeName-small-maxWidth": "35.5625rem",
+  "ThemeName-small-maxWidth": "47.9375rem",
   "ThemeName-medium-query":
     "only screen and (min-width: 48rem) and (max-width: 63.9375rem)",
   "ThemeName-medium-resolution": "2x",
