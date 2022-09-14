@@ -1,4 +1,4 @@
-# [Drupal](https://www.11ty.dev) Breakpoints to CSS
+# Drupal breakpoints to CSS
 
 <img 
   style="margin:2rem"
@@ -32,12 +32,82 @@ In your themes root folder, besides your already defined breakpoints file from d
  * @property {string} paths.css - ...path to your final css file
  * @property {string} paths.js - ...path to your final js file
  * @property {string} themeName - Drupals custom theme name
+ * @property {string} extractTo
+ * @property {boolean} js - (default true), should generate js file?
+ * @property {boolean} css - (default true), should generate css file?
  */
 ```
 
 ## Usage
 
 Just run `yarn drupal-breakpoints-css start` or `npm run drupal-breakpoints-css start`. Thats it :)
+
+## Examples
+
+```yml
+# Durpal breakpoints file
+theme_name.s:
+  label: small
+  mediaQuery: "only screen and (max-width: 47.9375rem)"
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+theme_name.md:
+  label: medium
+  mediaQuery: "only screen and (min-width: 48rem) and (max-width: 63.9375rem)"
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+theme_name.lg:
+  label: large
+  mediaQuery: "only screen and (min-width: 64rem) and (max-width: 89.9375rem)"
+  weight: 3
+  group: theme_name.group
+  multipliers:
+    - 1x
+    - 2x
+```
+
+```css
+/* Generated css file */
+html {
+  --ThemeName-small-query: "only screen and (max-width: 47.9375rem)";
+  --ThemeName-small-resolution: "2x";
+  --ThemeName-small-maxWidth: "47.9375rem";
+  --ThemeName-medium-query: "only screen and (min-width: 48rem) and (max-width: 63.9375rem)";
+  --ThemeName-medium-resolution: "2x";
+  --ThemeName-medium-minWidth: "48rem";
+  --ThemeName-medium-maxWidth: "63.9375rem";
+  --ThemeName-Group-large-query: "only screen and (min-width: 64rem) and (max-width: 89.9375rem)";
+  --ThemeName-Group-large-resolution: "2x";
+  --ThemeName-Group-large-minWidth: "64rem";
+  --ThemeName-Group-large-maxWidth: "89.9375rem";
+}
+```
+
+```js
+// Generated js file
+const BREAKPOINTS = {
+  "ThemeName-small-query": "only screen and (max-width: 35.5625rem)",
+  "ThemeName-small-resolution": "2x",
+  "ThemeName-small-maxWidth": "35.5625rem",
+  "ThemeName-medium-query":
+    "only screen and (min-width: 48rem) and (max-width: 63.9375rem)",
+  "ThemeName-medium-resolution": "2x",
+  "ThemeName-medium-minWidth": "48rem",
+  "ThemeName-medium-maxWidth": "63.9375rem",
+  "ThemeName-Group-large-query":
+    "only screen and (min-width: 64rem) and (max-width: 89.9375rem)",
+  "ThemeName-Group-large-resolution": "2x",
+  "ThemeName-Group-large-minWidth": "64rem",
+  "ThemeName-Group-large-maxWidth": "89.9375rem",
+};
+export default BREAKPOINTS;
+```
+
+### JS Example
 
 ## Acknowledgements
 
