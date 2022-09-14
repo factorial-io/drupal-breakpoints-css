@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/factorial-io/drupal-breakpoints-css#readme",
   "devDependencies": {
+    "deepmerge": "^4.2.2",
     "eslint": "^8.14.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.4.0",
