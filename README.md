@@ -107,8 +107,6 @@ const BREAKPOINTS = {
 export default BREAKPOINTS;
 ```
 
-### JS Example
-
 ## Acknowledgements
 
 This **Script** uses open source software and would not have been possible without the excellent work of the [Drupal](https://www.drupal.org), [Eslint](https://babeljs.io/team), [Prettier](https://unifiedjs.com/community/member/) and [debug-js](https://github.com/debug-js/debug) teams! Thanks a lot!
