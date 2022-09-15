@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/drupal-breakpoints-css",
+  "definitions": {
+    "drupal-breakpoints-css": {
+      "title": "drupal breakpoints to css configuration",
+      "description": "https://github.com/factorial-io/drupal-breakpoints-css",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "drupal": {
+          "$ref": "#/definitions/drupal"
+        },
+        "js": {
+          "$ref": "#/definitions/js"
+        },
+        "css": {
+          "$ref": "#/definitions/css"
+        },
+        "options": {
+          "$ref": "#/definitions/options"
+        }
+      },
+      "required": ["drupal"]
+    },
+    "drupal": {
+      "title": "drupal configuration",
+      "description": "https://github.com/factorial-io/drupal-breakpoints-css",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "themeName": {
+          "type": "string"
+        }
+      },
+      "required": ["path", "themeName"]
+    },
+    "js": {
+      "title": "javascript configuration",
+      "description": "https://github.com/factorial-io/drupal-breakpoints-css",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "path": {
+          "type": "string"
+        },
+        "es6": {
+          "type": "boolean"
+        }
+      }
+    },
+    "css": {
+      "title": "stylesheet configuration",
+      "description": "https://github.com/factorial-io/drupal-breakpoints-css",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "path": {
+          "type": "string"
+        },
+        "element": {
+          "type": "string"
+        }
+      }
+    },
+    "options": {
+      "title": "toggle available extraction options",
+      "description": "https://github.com/factorial-io/drupal-breakpoints-css",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mediaQuery": {
+          "type": "boolean"
+        },
+        "resolution": {
+          "type": "boolean"
+        },
+        "minWidth": {
+          "type": "boolean"
+        },
+        "maxWidth": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
