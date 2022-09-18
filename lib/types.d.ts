@@ -57,3 +57,8 @@ export interface customProperty {
   identifier: string;
   value: string;
 }
+
+export interface units {
+  length: string[];
+  resolution: string[];
+}
