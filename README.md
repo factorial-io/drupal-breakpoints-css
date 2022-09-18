@@ -22,7 +22,7 @@ npm install --sav-dev `@factorial-io/drupal-breakpoints-css`
 
 ## Configuration
 
-In your themes root folder, besides your already defined breakpoints file from drupal, add a `.breakpoints.config.yml` configuration file. The following properties are mandatory:
+In your themes root folder, besides your already defined breakpoints file from drupal, add a `breakpoints.config.yml` configuration file. The following properties are mandatory:
 
 ```js
 /**
