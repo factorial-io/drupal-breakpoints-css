@@ -123,7 +123,7 @@ export default BREAKPOINTS;
 
 ## Acknowledgements
 
-This **Script** uses open source software and would not have been possible without the excellent work of the [Drupal](https://www.drupal.org), [Eslint](https://babeljs.io/team) and [Prettier](https://unifiedjs.com/community/member/) teams! Thanks a lot!
+This **Script** uses open source software and would not have been possible without the excellent work of the [Drupal](https://www.drupal.org), [Eslint](https://babeljs.io/team), [deeomerge](https://github.com/TehShrike/deepmerge) and [Prettier](https://unifiedjs.com/community/member/) teams! Thanks a lot!
 
 ## Sponsored by
 
