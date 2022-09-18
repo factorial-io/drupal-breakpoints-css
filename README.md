@@ -26,7 +26,7 @@ In your themes root folder, besides your already defined breakpoints file from D
 
 ```typescript
 // ./lib/types.d.ts
-export interface Config {
+export interface UserConfig {
   drupal: {
     path: string;
     themeName: string;
@@ -34,21 +34,21 @@ export interface Config {
   prettier?: {
     path: string;
   };
-  js: {
-    enabled: boolean;
-    path: string;
-    type: commonjs | module;
+  js?: {
+    enabled?: boolean;
+    path?: string;
+    type?: commonjs | module;
   };
-  css: {
-    enabled: boolean;
-    path: string;
-    element: string;
+  css?: {
+    enabled?: boolean;
+    path?: string;
+    element?: string;
   };
-  options: {
-    mediaQuery: boolean;
-    resolution: boolean;
-    minWidth: boolean;
-    maxWidth: boolean;
+  options?: {
+    mediaQuery?: boolean;
+    resolution?: boolean;
+    minWidth?: boolean;
+    maxWidth?: boolean;
   };
 }
 ```

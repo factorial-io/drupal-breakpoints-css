@@ -35,7 +35,7 @@ export interface UserConfig {
   js?: {
     enabled?: boolean;
     path?: string;
-    type?: "commonjs" | "module";
+    type?: commonjs | module;
   };
   css?: {
     enabled?: boolean;
