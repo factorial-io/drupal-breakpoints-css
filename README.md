@@ -6,7 +6,7 @@
   alt="Drupal Logo"
   src="https://www.drupal.org/files/Wordmark_blue_RGB.png">
 
-To eliminate the need for different places for breakpoints and only maintain a single source of truth for those, this `node_module` extracts the breakpoints defined in the currently used drupal themes breakpoint file and generates grouped `customProperties` and a separate `js` object with all necessary parameters.
+To eliminate the need for different places for breakpoints and only maintain a single source of truth for those, this `node_module` extracts the breakpoints defined in the currently used Drupal themes breakpoint file and generates grouped `customProperties` and a separate `js` object with all necessary parameters.
 
 If the draft [`@custom-media`](https://www.w3.org/TR/mediaqueries-5/#at-ruledef-custom-media) or [PostCSS](https://github.com/postcss/postcss) with [Custom-Media](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media) plugin is already used, media queries can be written with `customProperties`. So any declaration of media queries within stylesheets is omitted and maintainability is increased.
 
@@ -22,28 +22,32 @@ npm install --sav-dev `@factorial-io/drupal-breakpoints-css`
 
 ## Configuration
 
-In your themes root folder, besides your already defined breakpoints file from drupal, add a `breakpoints.config.yml` configuration file. The following properties are mandatory:
+In your themes root folder, besides your already defined breakpoints file from Drupal, add a `breakpoints.config.yml` configuration file. The following properties are mandatory:
 
 ```js
-/**
- * @typedef {object} USER_CONFIG
- * @property {object} drupal - Drupal settings
- * @property {string} drupal.path - Path to the breakpoint file relative to themes root folder
- * @property {string} drupal.themeName - Current drupal theme name
- * @property {object} js - Javascript settings
- * @property {boolean} js.enabled - Toggle js file generation
- * @property {string} js.path - JS path relative to themes root folder
- * @property {boolean} js.es6 - Generate export default or module.exports
- * @property {object} css - Stylesheet settings
- * @property {boolean} css.enabled - Toggle css file generation
- * @property {string} css.path - CSS path relative to themes root folder
- * @property {string} css.element - Selector to apply the customProperties
- * @property {object} options - Toggle available options
- * @property {boolean} options.mediaQuery - Toggle mediaQuery extraction
- * @property {boolean} options.resolution - Toggle resolution extraction
- * @property {boolean} options.minWidth - Toggle minWidth extraction
- * @property {boolean} options.maxWidth - Toggle maxWidth extraction
- */
+// ./lib/types.d.ts
+export interface UserConfig {
+  drupal: {
+    path: string,
+    themeName: string,
+  };
+  js?: {
+    enabled?: boolean,
+    path?: string,
+    es6?: "commonjs" | "module",
+  };
+  css?: {
+    enabled?: boolean,
+    path?: string,
+    element?: string,
+  };
+  options?: {
+    mediaQuery?: boolean,
+    resolution?: boolean,
+    minWidth?: boolean,
+    maxWidth?: boolean,
+  };
+}
 ```
 
 You could validate your configuration files with the help of [JSON Schema Store](https://www.schemastore.org/json) and e.g [Visual Studio Code](https://code.visualstudio.com/) [YAML Extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml).
@@ -81,7 +85,7 @@ theme_name.lg:
 ```
 
 ```css
-/* Generated css file */
+/* Generated CSS file */
 :root {
   --ThemeName-small-mediaQuery: "only screen and (max-width: 47.9375rem)";
   --ThemeName-small-resolution: "2x";
@@ -98,7 +102,7 @@ theme_name.lg:
 ```
 
 ```js
-// Generated js file
+// Generated JS file
 const BREAKPOINTS = {
   "ThemeName-small-mediaQuery": "only screen and (max-width: 47.9375rem)",
   "ThemeName-small-resolution": "2x",

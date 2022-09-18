@@ -3,7 +3,7 @@
   "$ref": "#/definitions/drupal-breakpoints-css",
   "definitions": {
     "drupal-breakpoints-css": {
-      "title": "drupal breakpoints to css configuration",
+      "title": "Drupal breakpoints to CSS configuration",
       "description": "https://github.com/factorial-io/drupal-breakpoints-css",
       "type": "object",
       "additionalProperties": false,
@@ -24,7 +24,7 @@
       "required": ["drupal"]
     },
     "drupal": {
-      "title": "drupal configuration",
+      "title": "Drupal configuration",
       "description": "https://github.com/factorial-io/drupal-breakpoints-css",
       "type": "object",
       "additionalProperties": false,
@@ -39,7 +39,7 @@
       "required": ["path", "themeName"]
     },
     "js": {
-      "title": "javascript configuration",
+      "title": "JavaScript configuration",
       "description": "https://github.com/factorial-io/drupal-breakpoints-css",
       "type": "object",
       "additionalProperties": false,
@@ -50,13 +50,13 @@
         "path": {
           "type": "string"
         },
-        "es6": {
-          "type": "boolean"
+        "type": {
+          "enum": ["module", "commonjs"]
         }
       }
     },
     "css": {
-      "title": "stylesheet configuration",
+      "title": "CSS configuration",
       "description": "https://github.com/factorial-io/drupal-breakpoints-css",
       "type": "object",
       "additionalProperties": false,
@@ -73,7 +73,7 @@
       }
     },
     "options": {
-      "title": "toggle available extraction options",
+      "title": "Toggle available extraction options",
       "description": "https://github.com/factorial-io/drupal-breakpoints-css",
       "type": "object",
       "additionalProperties": false,
