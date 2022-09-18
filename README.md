@@ -24,33 +24,42 @@ npm install --sav-dev `@factorial-io/drupal-breakpoints-css`
 
 In your themes root folder, besides your already defined breakpoints file from Drupal, add a `breakpoints.config.yml` configuration file. The following properties are mandatory:
 
-```js
+```typescript
 // ./lib/types.d.ts
-export interface UserConfig {
+export interface Config {
   drupal: {
-    path: string,
-    themeName: string,
+    path: string;
+    themeName: string;
   };
-  js?: {
-    enabled?: boolean,
-    path?: string,
-    es6?: "commonjs" | "module",
+  prettier?: {
+    path: string;
   };
-  css?: {
-    enabled?: boolean,
-    path?: string,
-    element?: string,
+  js: {
+    enabled: boolean;
+    path: string;
+    type: commonjs | module;
   };
-  options?: {
-    mediaQuery?: boolean,
-    resolution?: boolean,
-    minWidth?: boolean,
-    maxWidth?: boolean,
+  css: {
+    enabled: boolean;
+    path: string;
+    element: string;
+  };
+  options: {
+    mediaQuery: boolean;
+    resolution: boolean;
+    minWidth: boolean;
+    maxWidth: boolean;
   };
 }
 ```
 
+### Schema Validation
+
 You could validate your configuration files with the help of [JSON Schema Store](https://www.schemastore.org/json) and e.g [Visual Studio Code](https://code.visualstudio.com/) [YAML Extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml).
+
+### Prettier
+
+To respect your local prettier formatting rules please add the path to the configuration file to `prettier.path`.
 
 ## Usage
 

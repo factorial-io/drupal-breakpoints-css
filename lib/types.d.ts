@@ -3,6 +3,9 @@ export interface Config {
     path: string;
     themeName: string;
   };
+  prettier?: {
+    path: string;
+  };
   js: {
     enabled: boolean;
     path: string;
@@ -25,6 +28,9 @@ export interface UserConfig {
   drupal: {
     path: string;
     themeName: string;
+  };
+  prettier?: {
+    path: string;
   };
   js?: {
     enabled?: boolean;
