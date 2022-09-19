@@ -9,7 +9,7 @@ export interface Config {
   js: {
     enabled: boolean;
     path: string;
-    type: commonjs | module;
+    type: "commonjs" | "module";
   };
   css: {
     enabled: boolean;
