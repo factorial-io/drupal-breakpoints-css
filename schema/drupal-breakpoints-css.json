@@ -19,6 +19,9 @@
         },
         "options": {
           "$ref": "#/definitions/options"
+        },
+        "prettier": {
+          "$ref": "#/definitions/prettier"
         }
       },
       "required": ["drupal"]
@@ -29,14 +32,14 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "path": {
+        "breakpointsPath": {
           "type": "string"
         },
         "themeName": {
           "type": "string"
         }
       },
-      "required": ["path", "themeName"]
+      "required": ["breakpointsPath", "themeName"]
     },
     "js": {
       "title": "JavaScript configuration",
@@ -89,6 +92,17 @@
         },
         "maxWidth": {
           "type": "boolean"
+        }
+      }
+    },
+    "prettier": {
+      "title": "Prettier options",
+      "description": "https://github.com/factorial-io/drupal-breakpoints-css",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "configPath": {
+          "type": "string"
         }
       }
     }
