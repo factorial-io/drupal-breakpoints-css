@@ -33,4 +33,9 @@ module.exports = {
     "jsdoc/require-param-description": 0,
     "jsdoc/require-returns-description": 0,
   },
+  settings: {
+    jsdoc: {
+      mode: "typescript",
+    },
+  },
 };
