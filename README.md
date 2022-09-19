@@ -28,16 +28,16 @@ In your themes root folder, besides your already defined breakpoints file from D
 // ./lib/types.d.ts
 export interface UserConfig {
   drupal: {
-    path: string;
+    breakpointsPath: string;
     themeName: string;
   };
   prettier?: {
-    path: string;
+    configPath: string;
   };
   js?: {
     enabled?: boolean;
     path?: string;
-    type?: commonjs | module;
+    type?: "commonjs" | "module";
   };
   css?: {
     enabled?: boolean;
