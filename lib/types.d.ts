@@ -1,7 +1,10 @@
 export interface Config {
   drupal: {
-    path: string;
+    breakpointsPath: string;
     themeName: string;
+  };
+  prettier?: {
+    configPath: string;
   };
   js: {
     enabled: boolean;
@@ -23,8 +26,11 @@ export interface Config {
 
 export interface UserConfig {
   drupal: {
-    path: string;
+    breakpointsPath: string;
     themeName: string;
+  };
+  prettier?: {
+    configPath: string;
   };
   js?: {
     enabled?: boolean;
