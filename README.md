@@ -109,7 +109,6 @@ theme_name.lg:
 @custom-media --Themename-large-minWidth (64rem);
 @custom-media --Themename-large-maxWidth (89.9375rem);
 
-/* or with customMedia disabled */
 :root {
   --ThemeName-small-mediaQuery: "only screen and (max-width: 47.9375rem)";
   --ThemeName-small-resolution: "2x";
