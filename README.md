@@ -43,6 +43,8 @@ export interface UserConfig {
     enabled?: boolean;
     path?: string;
     element?: string;
+    customMedia?: boolean;
+    customProperty?: boolean;
   };
   options?: {
     mediaQuery?: boolean;
@@ -95,6 +97,18 @@ theme_name.lg:
 
 ```css
 /* Generated CSS file */
+@custom-media --Themename-small-mediaQuery (only screen and (max-width: 47.9375rem));
+@custom-media --Themename-small-resolution (2x);
+@custom-media --Themename-small-maxWidth (47.9375rem);
+@custom-media --Themename-medium-mediaQuery (only screen and (min-width: 48rem) and (max-width: 63.9375rem));
+@custom-media --Themename-medium-resolution (2x);
+@custom-media --Themename-medium-minWidth (48rem);
+@custom-media --Themename-medium-maxWidth (63.9375rem);
+@custom-media --Themename-large-mediaQuery (only screen and (min-width: 64rem) and (max-width: 89.9375rem));
+@custom-media --Themename-large-resolution (2x);
+@custom-media --Themename-large-minWidth (64rem);
+@custom-media --Themename-large-maxWidth (89.9375rem);
+
 :root {
   --ThemeName-small-mediaQuery: "only screen and (max-width: 47.9375rem)";
   --ThemeName-small-resolution: "2x";
