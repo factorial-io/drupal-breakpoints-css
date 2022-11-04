@@ -44,6 +44,7 @@ export interface UserConfig {
     path?: string;
     element?: string;
     customMedia?: boolean;
+    customProperty?: boolean;
   };
   options?: {
     mediaQuery?: boolean;
