@@ -64,7 +64,7 @@ export interface Breakpoint {
 }
 
 export interface customProperty {
-  mediaFeature: "minWidth" | "maxWidth" | "resolution" | "mediaQuery";
+  mediaFeature?: "minWidth" | "maxWidth" | "resolution";
   name: string;
   value: string;
 }
