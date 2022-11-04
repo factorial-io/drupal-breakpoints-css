@@ -98,29 +98,29 @@ theme_name.lg:
 ```css
 /* Generated CSS file */
 @custom-media --Themename-small-mediaQuery (only screen and (max-width: 47.9375rem));
-@custom-media --Themename-small-resolution (2x);
-@custom-media --Themename-small-maxWidth (47.9375rem);
+@custom-media --Themename-small-resolution (resolution: 2x);
+@custom-media --Themename-small-maxWidth (max-width: 47.9375rem);
 @custom-media --Themename-medium-mediaQuery (only screen and (min-width: 48rem) and (max-width: 63.9375rem));
-@custom-media --Themename-medium-resolution (2x);
-@custom-media --Themename-medium-minWidth (48rem);
-@custom-media --Themename-medium-maxWidth (63.9375rem);
+@custom-media --Themename-medium-resolution (resolution: 2x);
+@custom-media --Themename-medium-minWidth (min-width: 48rem);
+@custom-media --Themename-medium-maxWidth (max-width: 63.9375rem);
 @custom-media --Themename-large-mediaQuery (only screen and (min-width: 64rem) and (max-width: 89.9375rem));
-@custom-media --Themename-large-resolution (2x);
-@custom-media --Themename-large-minWidth (64rem);
-@custom-media --Themename-large-maxWidth (89.9375rem);
+@custom-media --Themename-large-resolution (resolution: 2x);
+@custom-media --Themename-large-minWidth (min-width: 64rem);
+@custom-media --Themename-large-maxWidth (max-width: 89.9375rem);
 
 :root {
   --ThemeName-small-mediaQuery: "only screen and (max-width: 47.9375rem)";
-  --ThemeName-small-resolution: "2x";
-  --ThemeName-small-maxWidth: "47.9375rem";
+  --ThemeName-small-resolution: "resolution: 2x";
+  --ThemeName-small-maxWidth: "max-width: 47.9375rem";
   --ThemeName-medium-mediaQuery: "only screen and (min-width: 48rem) and (max-width: 63.9375rem)";
-  --ThemeName-medium-resolution: "2x";
-  --ThemeName-medium-minWidth: "48rem";
-  --ThemeName-medium-maxWidth: "63.9375rem";
+  --ThemeName-medium-resolution: "resolution: 2x";
+  --ThemeName-medium-minWidth: "min-width: 48rem";
+  --ThemeName-medium-maxWidth: "max-width: 63.9375rem";
   --ThemeName-Group-large-mediaQuery: "only screen and (min-width: 64rem) and (max-width: 89.9375rem)";
-  --ThemeName-Group-large-resolution: "2x";
-  --ThemeName-Group-large-minWidth: "64rem";
-  --ThemeName-Group-large-maxWidth: "89.9375rem";
+  --ThemeName-Group-large-resolution: "resolution: 2x";
+  --ThemeName-Group-large-minWidth: "min-width: 64rem";
+  --ThemeName-Group-large-maxWidth: "max-width: 89.9375rem";
 }
 ```
 
@@ -128,18 +128,18 @@ theme_name.lg:
 // Generated JS file
 const BREAKPOINTS = {
   "ThemeName-small-mediaQuery": "only screen and (max-width: 47.9375rem)",
-  "ThemeName-small-resolution": "2x",
-  "ThemeName-small-maxWidth": "47.9375rem",
+  "ThemeName-small-resolution": "resolution: 2x",
+  "ThemeName-small-maxWidth": "max-width: 47.9375rem",
   "ThemeName-medium-mediaQuery":
     "only screen and (min-width: 48rem) and (max-width: 63.9375rem)",
-  "ThemeName-medium-resolution": "2x",
-  "ThemeName-medium-minWidth": "48rem",
-  "ThemeName-medium-maxWidth": "63.9375rem",
+  "ThemeName-medium-resolution": "resolution: 2x",
+  "ThemeName-medium-minWidth": "min-width: 48rem",
+  "ThemeName-medium-maxWidth": "max-width: 63.9375rem",
   "ThemeName-Group-large-mediaQuery":
     "only screen and (min-width: 64rem) and (max-width: 89.9375rem)",
-  "ThemeName-Group-large-resolution": "2x",
-  "ThemeName-Group-large-minWidth": "64rem",
-  "ThemeName-Group-large-maxWidth": "89.9375rem",
+  "ThemeName-Group-large-resolution": "resolution: 2x",
+  "ThemeName-Group-large-minWidth": "min-width: 64rem",
+  "ThemeName-Group-large-maxWidth": "max-width: 89.9375rem",
 };
 export default BREAKPOINTS;
 ```
