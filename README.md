@@ -100,46 +100,22 @@ theme_name.lg:
 @custom-media --Themename-small-mediaQuery (only screen and (max-width: 47.9375rem));
 @custom-media --Themename-small-resolution (resolution: 2x);
 @custom-media --Themename-small-maxWidth (max-width: 47.9375rem);
-@custom-media --Themename-medium-mediaQuery (only screen and (min-width: 48rem) and (max-width: 63.9375rem));
-@custom-media --Themename-medium-resolution (resolution: 2x);
-@custom-media --Themename-medium-minWidth (min-width: 48rem);
-@custom-media --Themename-medium-maxWidth (max-width: 63.9375rem);
-@custom-media --Themename-large-mediaQuery (only screen and (min-width: 64rem) and (max-width: 89.9375rem));
-@custom-media --Themename-large-resolution (resolution: 2x);
-@custom-media --Themename-large-minWidth (min-width: 64rem);
-@custom-media --Themename-large-maxWidth (max-width: 89.9375rem);
 
 :root {
   --ThemeName-small-mediaQuery: "only screen and (max-width: 47.9375rem)";
-  --ThemeName-small-resolution: "resolution: 2x";
-  --ThemeName-small-maxWidth: "max-width: 47.9375rem";
-  --ThemeName-medium-mediaQuery: "only screen and (min-width: 48rem) and (max-width: 63.9375rem)";
-  --ThemeName-medium-resolution: "resolution: 2x";
-  --ThemeName-medium-minWidth: "min-width: 48rem";
-  --ThemeName-medium-maxWidth: "max-width: 63.9375rem";
-  --ThemeName-Group-large-mediaQuery: "only screen and (min-width: 64rem) and (max-width: 89.9375rem)";
-  --ThemeName-Group-large-resolution: "resolution: 2x";
-  --ThemeName-Group-large-minWidth: "min-width: 64rem";
-  --ThemeName-Group-large-maxWidth: "max-width: 89.9375rem";
+  --ThemeName-small-resolution: "2x";
+  --ThemeName-small-maxWidth: "47.9375rem";
 }
 ```
 
 ```js
 // Generated JS file
 const BREAKPOINTS = {
-  "ThemeName-small-mediaQuery": "only screen and (max-width: 47.9375rem)",
+  "ThemeName-small-mediaQuery--raw": "only screen and (max-width: 47.9375rem)",
+  "ThemeName-small-resolution--raw": "2x",
   "ThemeName-small-resolution": "resolution: 2x",
+  "ThemeName-small-maxWidth--raw": "47.9375rem",
   "ThemeName-small-maxWidth": "max-width: 47.9375rem",
-  "ThemeName-medium-mediaQuery":
-    "only screen and (min-width: 48rem) and (max-width: 63.9375rem)",
-  "ThemeName-medium-resolution": "resolution: 2x",
-  "ThemeName-medium-minWidth": "min-width: 48rem",
-  "ThemeName-medium-maxWidth": "max-width: 63.9375rem",
-  "ThemeName-Group-large-mediaQuery":
-    "only screen and (min-width: 64rem) and (max-width: 89.9375rem)",
-  "ThemeName-Group-large-resolution": "resolution: 2x",
-  "ThemeName-Group-large-minWidth": "min-width: 64rem",
-  "ThemeName-Group-large-maxWidth": "max-width: 89.9375rem",
 };
 export default BREAKPOINTS;
 ```
